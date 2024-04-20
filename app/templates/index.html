@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Simplify Your Reading</h1>
+        <h2>Text Summarization Tool</h2>
+    </header>
+    <p class="intro">Feeling overwhelmed by long articles or documents? Get a quick and concise overview with our free text summarization tool.</p>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label for="text">Paste your text here:</label>
+            <textarea id="text" name="text" rows="10" placeholder="Enter or paste the text you want to summarize"></textarea>
+            <br>
+            <button type="submit">Summarize</button>
+        </form>
+        {% if SUMMARY_ANS %}
+            <div class="ans">
+                    {{SUMMARY_ANS}}
+            </div>
+
+        {% endif %}
+    </div>
+</body>
+</html>
