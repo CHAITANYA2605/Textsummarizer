@@ -1,4 +1,3 @@
-#Textsummarizer_django
 
 This repository contains a Django project for text summarization using the BART Large CNN model from Hugging Face.
 
